@@ -1,0 +1,26 @@
+/* Rooms Listing / Room Detail / Gallery — Prashant Sharma
+   Layout specific to this page group only.
+   Do NOT redefine --color-* or --font-* here — that's style.css's job. */
+
+.rooms-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+}
+
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1rem;
+}
+.gallery-grid .card-media { aspect-ratio: 1 / 1; }
+
+.room-detail-layout {
+  display: grid;
+  grid-template-columns: 1.3fr 1fr;
+  gap: 3rem;
+  align-items: start;
+}
+@media (max-width: 800px) {
+  .room-detail-layout { grid-template-columns: 1fr; }
+}

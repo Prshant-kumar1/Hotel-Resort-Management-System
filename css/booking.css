@@ -1,0 +1,37 @@
+/* Booking / Login / Register / My Bookings — Prateek Mudgal
+   Layout specific to this page group only.
+   Shared .auth-card / .form-* / .btn components live in style.css. */
+
+.booking-form {
+  max-width: 640px;
+  margin-inline: auto;
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  padding: 2.2rem;
+  box-shadow: var(--shadow-sm);
+}
+.booking-form-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+}
+@media (max-width: 600px) {
+  .booking-form-row { grid-template-columns: 1fr; }
+}
+
+.bookings-table-wrap { overflow-x: auto; }
+.bookings-table { background: var(--color-surface); border: 1px solid var(--color-border); border-radius: var(--radius-md); overflow: hidden; }
+.bookings-table th, .bookings-table td {
+  padding: 0.85rem 1rem;
+  border-bottom: 1px solid var(--color-border);
+  text-align: left;
+  font-size: 0.9rem;
+}
+.bookings-table th {
+  color: var(--color-text-muted);
+  font-weight: 600;
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
