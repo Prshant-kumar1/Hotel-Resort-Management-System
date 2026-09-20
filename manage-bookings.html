@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Manage Bookings | Aurelia Bay Resort</title>
+
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/admin.css">
+</head>
+
+<body>
+
+    <div class="admin-shell">
+
+        <!-- Sidebar -->
+        <aside class="admin-sidebar">
+
+            <a href="admin-dashboard.html" class="logo">
+                Aurelia Bay Resort
+            </a>
+
+            <nav class="admin-nav">
+                <a href="admin-dashboard.html">Dashboard</a>
+                <a href="manage-rooms.html">Manage Rooms</a>
+                <a href="manage-bookings.html" class="active">
+                    Manage Bookings
+                </a>
+                <a href="index.html">Back to Website</a>
+            </nav>
+
+        </aside>
+
+
+        <!-- Main Content -->
+        <main class="admin-main">
+
+            <!-- Top Bar -->
+            <div class="admin-topbar">
+
+                <div>
+                    <span class="eyebrow">Admin Panel</span>
+                    <h1>Manage Bookings</h1>
+                </div>
+
+                <a href="admin-login.html" class="btn btn-outline">
+                    Logout
+                </a>
+
+            </div>
+
+
+            <!-- Booking Summary -->
+            <section class="stat-grid">
+
+                <article class="stat-card">
+                    <div class="stat-value">12</div>
+                    <div class="stat-label">Total Bookings</div>
+                </article>
+
+                <article class="stat-card">
+                    <div class="stat-value">6</div>
+                    <div class="stat-label">Pending</div>
+                </article>
+
+                <article class="stat-card">
+                    <div class="stat-value">4</div>
+                    <div class="stat-label">Confirmed</div>
+                </article>
+
+                <article class="stat-card">
+                    <div class="stat-value">2</div>
+                    <div class="stat-label">Cancelled</div>
+                </article>
+
+            </section>
+
+
+            <!-- Booking List -->
+            <section class="card">
+
+                <div class="card-body">
+
+                    <span class="eyebrow">Reservations</span>
+                    <h2>Recent Bookings</h2>
+
+                    <br>
+
+                    <!-- Booking 1 -->
+                    <div class="booking-item">
+
+                        <div>
+                            <h3>Booking #1024</h3>
+                            <p><strong>Guest:</strong> Aarav Sharma</p>
+                            <p><strong>Room:</strong> Deluxe Room - 101</p>
+                            <p><strong>Stay:</strong> 22 Sep - 25 Sep</p>
+                            <p>
+                                <strong>Status:</strong>
+                                <span class="booking-status confirmed">
+                                    Confirmed
+                                </span>
+                            </p>
+                        </div>
+
+                        <div class="booking-actions">
+                            <a href="#" class="btn btn-outline">View</a>
+                            <a href="#" class="btn btn-outline">Cancel</a>
+                        </div>
+
+                    </div>
+
+                    <hr>
+
+
+                    <!-- Booking 2 -->
+                    <div class="booking-item">
+
+                        <div>
+                            <h3>Booking #1023</h3>
+                            <p><strong>Guest:</strong> Ananya Verma</p>
+                            <p><strong>Room:</strong> Suite Room - 202</p>
+                            <p><strong>Stay:</strong> 24 Sep - 27 Sep</p>
+                            <p>
+                                <strong>Status:</strong>
+                                <span class="booking-status pending">
+                                    Pending
+                                </span>
+                            </p>
+                        </div>
+
+                        <div class="booking-actions">
+                            <a href="#" class="btn btn-outline">Confirm</a>
+                            <a href="#" class="btn btn-outline">Cancel</a>
+                        </div>
+
+                    </div>
+
+                    <hr>
+
+
+                    <!-- Booking 3 -->
+                    <div class="booking-item">
+
+                        <div>
+                            <h3>Booking #1022</h3>
+                            <p><strong>Guest:</strong> Rohan Mehta</p>
+                            <p><strong>Room:</strong> Standard Room - 305</p>
+                            <p><strong>Stay:</strong> 26 Sep - 28 Sep</p>
+                            <p>
+                                <strong>Status:</strong>
+                                <span class="booking-status cancelled">
+                                    Cancelled
+                                </span>
+                            </p>
+                        </div>
+
+                        <div class="booking-actions">
+                            <a href="#" class="btn btn-outline">View</a>
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+        </main>
+
+    </div>
+
+</body>
+</html>
