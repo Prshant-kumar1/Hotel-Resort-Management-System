@@ -1,6 +1,6 @@
 # Aurelia Bay Resort — Hotel & Resort Management System
  
-B.Tech CSE 3rd Year Synopsis Project — GLA University, Mathura
+B.Tech CSE 3rd Year Mini Project — GLA University, Mathura
 Department of Computer Engineering Applications · Supervised by Mr. Deepak Prasad
  
 ## Overview
