@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Booking | Hotel Resort</title>
+    <title>Booking | Aurelia Bay</title>
 
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/booking.css">
@@ -29,19 +29,44 @@
                         type="text"
                         id="guest-name"
                         class="form-input"
-                        placeholder="Enter guest name"
+                        placeholder="Enter your full name"
+                        required
+                    >
+                </div>
+
+                <div class="form-group">
+                    <label for="email">Email Address</label>
+                    <input
+                        type="email"
+                        id="email"
+                        class="form-input"
+                        placeholder="Enter your email"
+                        required
+                    >
+                </div>
+
+                <div class="form-group">
+                    <label for="phone">Phone Number</label>
+                    <input
+                        type="tel"
+                        id="phone"
+                        class="form-input"
+                        placeholder="Enter your phone number"
                         required
                     >
                 </div>
 
                 <div class="form-group">
                     <label for="room">Select Room</label>
+
                     <select id="room" class="form-input" required>
                         <option value="">Select a room</option>
-                        <option value="deluxe">Deluxe Room</option>
-                        <option value="suite">Luxury Suite</option>
-                        <option value="family">Family Room</option>
-                        <option value="presidential">Presidential Suite</option>
+                        <option value="garden-deluxe-room">Garden Deluxe Room</option>
+                        <option value="premium-ocean-room">Premium Ocean Room</option>
+                        <option value="executive-suite">Executive Suite</option>
+                        <option value="family-room">Family Room</option>
+                        <option value="poolside-villa">Poolside Villa</option>
+                        <option value="presidential-suite">Presidential Suite</option>
                     </select>
                 </div>
 
@@ -101,6 +126,7 @@
 
                 <div class="form-group">
                     <label for="requests">Special Requests</label>
+
                     <textarea
                         id="requests"
                         class="form-input"
