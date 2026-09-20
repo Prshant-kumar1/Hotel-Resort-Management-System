@@ -30,7 +30,7 @@ the basic embed).
  
 ## Tech stack
  
-- HTML5, CSS3 (one centralized stylesheet — see `WALKTHROUGH.md`)
+- HTML5, CSS3
 - Fonts: Fraunces (display) + Work Sans (body), loaded via Google Fonts
 - Real photography for rooms, resort exteriors, and team headshots
 - Git + GitHub for version control
@@ -66,7 +66,6 @@ Hotel-Resort-Management-System/
 │   ├── admin-resort.jpg
 │   └── admin-dashboard.jpg  ← currently a 0-byte file, see Known Issues
 ├── README.md
-└── WALKTHROUGH.md
 ```
  
 ## Running it
