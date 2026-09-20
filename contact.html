@@ -1,131 +1,156 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Contact Us &mdash; Aurelia Bay Resort</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600&family=Work+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600&family=Work+Sans:wght@400;500;600&display=swap"
+    rel="stylesheet">
   <link rel="stylesheet" href="css/style.css">
 
 </head>
+
 <body>
 
-<header class="site-header">
-  <!-- =================================================================
+  <header class="site-header">
+    <!-- =================================================================
        Shared header + footer. Do NOT edit markup or styling here on a
        per-page basis — this block must stay identical across every
        public page. Header/footer look comes ONLY from css/style.css.
        ================================================================= -->
-  <div class="container header-inner">
-    <a href="index.html" class="logo">Aurelia Bay</a>
-    <input type="checkbox" id="nav-toggle" class="nav-toggle">
-    <label for="nav-toggle" class="nav-toggle-label"><span></span><span></span><span></span></label>
-    <nav class="main-nav" aria-label="Primary">
-      <ul>
-        <li><a href="index.html" class="nav-link">Home</a></li>
-        <li><a href="rooms.html" class="nav-link">Rooms &amp; Suites</a></li>
-        <li><a href="gallery.html" class="nav-link">Gallery</a></li>
-        <li><a href="about.html" class="nav-link">About</a></li>
-        <li><a href="contact.html" class="nav-link active">Contact</a></li>
-      </ul>
-    </nav>
-    <a href="booking.html" class="btn btn-primary nav-cta">Book Now</a>
-  </div>
-</header>
+    <div class="container header-inner">
+      <a href="index.html" class="logo">Aurelia Bay</a>
+      <input type="checkbox" id="nav-toggle" class="nav-toggle">
+      <label for="nav-toggle" class="nav-toggle-label"><span></span><span></span><span></span></label>
+      <nav class="main-nav" aria-label="Primary">
+        <ul>
+          <li><a href="index.html" class="nav-link">Home</a></li>
+          <li><a href="rooms.html" class="nav-link">Rooms &amp; Suites</a></li>
+          <li><a href="gallery.html" class="nav-link">Gallery</a></li>
+          <li><a href="about.html" class="nav-link">About</a></li>
+          <li><a href="contact.html" class="nav-link active">Contact</a></li>
+        </ul>
+      </nav>
+      <a href="booking.html" class="btn btn-primary nav-cta">Book Now</a>
+    </div>
+  </header>
 
-<main>
-  <!-- =================================================================
+  <main>
+    <!-- =================================================================
        PAGE CONTENT — owned by Prashant Kumar
        Do not add <style> tags or inline style="" — use css/style.css.
        ================================================================= -->
 
-  <section class="page-hero">
-    <div class="container">
-      <p class="eyebrow">Get in Touch</p>
-      <h1>Contact Us</h1>
-      <p class="lead">Questions about a stay, a private event, or just want directions? We're a short reply away.</p>
-    </div>
-  </section>
+    <section class="page-hero">
+      <div class="container">
+        <p class="eyebrow">Get in Touch</p>
+        <h1>Contact Us</h1>
+        <p class="lead">Questions about a stay, a private event, or just want directions? We're a short reply away.</p>
+      </div>
+    </section>
 
-  <section class="section container">
-    <div class="contact-layout">
-      <div>
-        <h2>Reach us directly</h2>
-        <ul class="info-list">
-          <li><strong>Address</strong>Aurelia Bay Resort, Konkan Coastal Road, Maharashtra 402201</li>
-          <li><strong>Reservations</strong>+91 98765 43210 &middot; reservations@aureliabay.example</li>
-          <li><strong>Front Desk</strong>Available 24 hours</li>
-          <li><strong>Check-in / Check-out</strong>2:00 PM / 11:00 AM</li>
-        </ul>
-        <div class="quick-contact">
-          <div class="card"><div class="card-body"><h3>Reservations</h3><p>New bookings, changes, group rates.</p></div></div>
-          <div class="card"><div class="card-body"><h3>Events</h3><p>Weddings, offsites, private dining.</p></div></div>
-          <div class="card"><div class="card-body"><h3>Concierge</h3><p>In-stay requests and local recommendations.</p></div></div>
+    <section class="section container">
+      <div class="contact-layout">
+        <div>
+          <h2>Reach us directly</h2>
+          <ul class="info-list">
+            <li><strong>Address </strong> Aurelia Bay Resort, Konkan Coastal Road, Maharashtra 402201</li>
+            <li><strong>Reservations </strong>+91 98765 43210 &middot; reservations@aureliabay.example</li>
+            <li><strong>Front Desk </strong>Available 24 hours</li>
+            <li><strong>Check-in / Check-out</strong> 2:00 PM / 11:00 AM</li>
+          </ul>
+          <div class="quick-contact">
+            <div class="card">
+              <div class="card-body">
+                <h3>Reservations</h3>
+                <p>New bookings, changes, group rates.</p>
+              </div>
+            </div>
+            <div class="card">
+              <div class="card-body">
+                <h3>Events</h3>
+                <p>Weddings, offsites, private dining.</p>
+              </div>
+            </div>
+            <div class="card">
+              <div class="card-body">
+                <h3>Concierge</h3>
+                <p>In-stay requests and local recommendations.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <form class="form-card">
+          <h2>Send a message</h2>
+          <div class="form-group">
+            <label class="form-label" for="name">Full name</label>
+            <input class="form-input" type="text" id="name" name="name">
+          </div>
+          <div class="form-group">
+            <label class="form-label" for="email">Email</label>
+            <input class="form-input" type="email" id="email" name="email">
+          </div>
+          <div class="form-group">
+            <label class="form-label" for="subject">Subject</label>
+            <input class="form-input" type="text" id="subject" name="subject">
+          </div>
+          <div class="form-group">
+            <label class="form-label" for="message">Message</label>
+            <textarea class="form-textarea" id="message" name="message" rows="5"></textarea>
+          </div>
+          <button class="btn btn-primary btn-block" type="submit">Send Message</button>
+        </form>
+      </div>
+    </section>
+
+    <section class="section section-alt">
+      <div class="container map-section">
+        <p class="eyebrow">Find Us</p>
+        <h2>On the Konkan coast, three hours from Mumbai</h2>
+        <div class="map-placeholder">
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d241317.11609823273!2d72.74109867909337!3d19.08219783958784!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be7c6306644edc1%3A0x5da4ed8f8d648c69!2sMumbai%2C%20Maharashtra!5e0!3m2!1sen!2sin!4v1700000000000!5m2!1sen!2sin"
+            title="Hotel Location" width="100%" height="450" loading="lazy">
+          </iframe>
         </div>
       </div>
+    </section>
+  </main>
 
-      <form class="form-card">
-        <h2>Send a message</h2>
-        <div class="form-group">
-          <label class="form-label" for="name">Full name</label>
-          <input class="form-input" type="text" id="name" name="name">
-        </div>
-        <div class="form-group">
-          <label class="form-label" for="email">Email</label>
-          <input class="form-input" type="email" id="email" name="email">
-        </div>
-        <div class="form-group">
-          <label class="form-label" for="subject">Subject</label>
-          <input class="form-input" type="text" id="subject" name="subject">
-        </div>
-        <div class="form-group">
-          <label class="form-label" for="message">Message</label>
-          <textarea class="form-textarea" id="message" name="message" rows="5"></textarea>
-        </div>
-        <button class="btn btn-primary btn-block" type="submit">Send Message</button>
-      </form>
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div>
+        <h4>Aurelia Bay Resort</h4>
+        <p>A quiet stretch of coastline, reimagined as a place to slow down.</p>
+      </div>
+      <div>
+        <h4>Explore</h4>
+        <ul role="list">
+          <li><a href="rooms.html">Rooms &amp; Suites</a></li>
+          <li><a href="gallery.html">Gallery</a></li>
+          <li><a href="about.html">About</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Guest Services</h4>
+        <ul role="list">
+          <li><a href="booking.html">Book a Stay</a></li>
+          <li><a href="login.html">Guest Login</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
     </div>
-  </section>
-
-  <section class="section section-alt">
-    <div class="container map-section">
-      <p class="eyebrow">Find Us</p>
-      <h2>On the Konkan coast, three hours from Mumbai</h2>
-      <div class="map-placeholder">Map goes here once the location API is wired up</div>
+    <div class="container footer-bottom">
+      <span>&copy; 2026 Aurelia Bay Resort &mdash; student project, GLA University.</span>
+      <span>Prashant Kumar &middot; Prashant Sharma &middot; Prateek Mudgal &middot; Priyanka Saraswat</span>
     </div>
-  </section>
-</main>
-
-<footer class="site-footer">
-  <div class="container footer-grid">
-    <div>
-      <h4>Aurelia Bay Resort</h4>
-      <p>A quiet stretch of coastline, reimagined as a place to slow down.</p>
-    </div>
-    <div>
-      <h4>Explore</h4>
-      <ul role="list">
-        <li><a href="rooms.html">Rooms &amp; Suites</a></li>
-        <li><a href="gallery.html">Gallery</a></li>
-        <li><a href="about.html">About</a></li>
-      </ul>
-    </div>
-    <div>
-      <h4>Guest Services</h4>
-      <ul role="list">
-        <li><a href="booking.html">Book a Stay</a></li>
-        <li><a href="login.html">Guest Login</a></li>
-        <li><a href="contact.html">Contact</a></li>
-      </ul>
-    </div>
-  </div>
-  <div class="container footer-bottom">
-    <span>&copy; 2026 Aurelia Bay Resort &mdash; student project, GLA University.</span>
-    <span>Prashant Kumar &middot; Prashant Sharma &middot; Prateek Mudgal &middot; Priyanka Saraswat</span>
-  </div>
-</footer>
+  </footer>
 
 </body>
+
 </html>
