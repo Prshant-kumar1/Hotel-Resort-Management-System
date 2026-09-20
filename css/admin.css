@@ -1,52 +1,116 @@
 /* Admin Login / Dashboard / Manage Rooms / Manage Bookings — Priyanka Saraswat
+
    Layout specific to this page group only.
+
    Sidebar/topbar structure lives here; colors, type, buttons, forms,
-   and the .auth-card used by admin-login.html all come from style.css. */
+   and the .auth-card used by admin-login.html all come from style.css.
+*/
+
+
+/* =========================
+   ADMIN LAYOUT
+   ========================= */
 
 .admin-shell {
-  display: grid;
-  grid-template-columns: 240px 1fr;
-  min-height: 100vh;
-}
-.admin-sidebar {
-  background: var(--color-primary-dark);
-  color: #eee7d6;
-  padding: 1.8rem 1.3rem;
-}
-.admin-sidebar .logo { color: #fff; display: block; margin-bottom: 2rem; }
-.admin-nav a {
-  display: block;
-  color: #cfc6ae;
-  padding: 0.65rem 0.7rem;
-  border-radius: var(--radius-sm);
-  font-size: 0.9rem;
-  margin-bottom: 0.2rem;
-}
-.admin-nav a:hover, .admin-nav a.active { background: rgba(255,255,255,0.1); color: #fff; }
+    display: grid;
+    grid-template-columns: 240px 1fr;
+    min-height: 100vh;
 
-.admin-main { padding: 2.2rem 2.5rem; background: var(--color-bg); }
-.admin-topbar { display: flex; justify-content: space-between; align-items: center; margin-bottom: 2rem; }
+    /* Admin background image */
+   background-image: url("../images/admin-resort.jpg");
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+
+/* =========================
+   SIDEBAR
+   ========================= */
+
+.admin-sidebar {
+    background: rgba(83, 92, 58, 0.85);
+    color: #eee7d6;
+    padding: 1.8rem 1.3rem;
+}
+
+.admin-sidebar .logo {
+    color: #fff;
+    display: block;
+    margin-bottom: 2rem;
+}
+
+.admin-nav a {
+    display: block;
+    color: #cfc6ae;
+    padding: 0.65rem 0.7rem;
+    border-radius: var(--radius-sm);
+    font-size: 0.9rem;
+    margin-bottom: 0.2rem;
+}
+
+.admin-nav a:hover,
+.admin-nav a.active {
+    background: rgba(255, 255, 255, 0.1);
+    color: #fff;
+}
+
+
+/* =========================
+   MAIN CONTENT
+   ========================= */
+
+.admin-main {
+    padding: 2.2rem 2.5rem;
+    background: rgba(250, 246, 238, 0.88);
+}
+.admin-topbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 2rem;
+}
+
+
+/* =========================
+   DASHBOARD STAT CARDS
+   ========================= */
 
 .stat-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-  gap: 1.2rem;
-  margin-bottom: 2.5rem;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1.2rem;
+    margin-bottom: 2.5rem;
 }
-.stat-card { background: var(--color-surface); border: 1px solid var(--color-border); border-radius: var(--radius-md); padding: 1.3rem 1.4rem; }
-.stat-card .stat-value { font-family: var(--font-display); font-size: 1.8rem; color: var(--color-primary-dark); }
-.stat-card .stat-label { font-size: 0.8rem; color: var(--color-text-muted); text-transform: uppercase; letter-spacing: 0.05em; }
 
-@media (max-width: 800px) {
-  .admin-shell { grid-template-columns: 1fr; }
-  .admin-sidebar { display: flex; align-items: center; justify-content: space-between; }
-  .admin-nav { display: flex; gap: 0.5rem; }
+.stat-card {
+    background: var(--color-surface);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-md);
+    padding: 1.3rem 1.4rem;
 }
-/* Manage Rooms */
+
+.stat-card .stat-value {
+    font-family: var(--font-display);
+    font-size: 1.8rem;
+    color: var(--color-primary-dark);
+}
+
+.stat-card .stat-label {
+    font-size: 0.8rem;
+    color: var(--color-text-muted);
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+
+/* =========================
+   MANAGE ROOMS
+   ========================= */
 
 .room-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    grid-template-columns: repeat(3, 1fr);
     gap: 1.5rem;
 }
 
@@ -95,20 +159,10 @@
 }
 
 
-.admin-shell {
-    background-image: url("../images/admin-dashboard.jpg");
-    background-size: cover;
-    background-position: center;
-    background-attachment: fixed;
-}
+/* =========================
+   ADMIN LOGIN
+   ========================= */
 
-.admin-sidebar {
-    background: rgba(83, 92, 58, 0.75);
-}
-
-.admin-main {
-    background: rgba(250, 246, 238, 0.45);
-}
 .login-options {
     display: flex;
     justify-content: space-between;
@@ -124,4 +178,46 @@
 
 .login-options a {
     font-size: 0.85rem;
+}
+
+
+/* =========================
+   RESPONSIVE DESIGN
+   ========================= */
+
+@media (max-width: 900px) {
+
+    .room-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+}
+
+
+@media (max-width: 800px) {
+
+    .admin-shell {
+        grid-template-columns: 1fr;
+    }
+
+    .admin-sidebar {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    .admin-nav {
+        display: flex;
+        gap: 0.5rem;
+    }
+
+}
+
+
+@media (max-width: 600px) {
+
+    .room-grid {
+        grid-template-columns: 1fr;
+    }
+
 }
