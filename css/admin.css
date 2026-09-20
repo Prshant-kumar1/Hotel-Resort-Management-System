@@ -93,3 +93,19 @@
     gap: 0.7rem;
     margin-top: 1rem;
 }
+
+
+.admin-shell {
+    background-image: url("../images/admin-dashboard.jpg");
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+.admin-sidebar {
+    background: rgba(83, 92, 58, 0.75);
+}
+
+.admin-main {
+    background: rgba(250, 246, 238, 0.45);
+}
