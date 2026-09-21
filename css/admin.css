@@ -221,3 +221,27 @@
     }
 
 }
+.booking-item {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) auto;
+    gap: 1.5rem;
+    align-items: center;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.booking-item > div:first-child {
+    min-width: 0;
+}
+
+.booking-item h3,
+.booking-item p {
+    overflow-wrap: break-word;
+    word-wrap: break-word;
+}
+
+.booking-actions {
+    display: flex;
+    gap: 0.7rem;
+    flex-shrink: 0;
+}
