@@ -129,6 +129,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
       alert("Login successful. Welcome back!");
       loginForm.reset();
+      window.location.href = "index.html";
     });
   }
 
