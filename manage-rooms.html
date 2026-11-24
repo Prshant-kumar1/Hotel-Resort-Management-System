@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Manage Rooms | Aurelia Bay Resort</title>
+
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/admin.css">
+</head>
+
+<body>
+
+    <div class="admin-shell">
+
+        <!-- Sidebar -->
+        <aside class="admin-sidebar">
+
+            <a href="admin-dashboard.html" class="logo">
+                Aurelia Bay Resort
+            </a>
+
+            <nav class="admin-nav">
+                <a href="admin-dashboard.html">Dashboard</a>
+                <a href="manage-rooms.html" class="active">Manage Rooms</a>
+                <a href="manage-bookings.html">Manage Bookings</a>
+                <a href="index.html">Back to Website</a>
+            </nav>
+
+        </aside>
+
+
+        <!-- Main Content -->
+        <main class="admin-main">
+
+            <!-- Top Bar -->
+            <div class="admin-topbar">
+
+                <div>
+                    <span class="eyebrow">Admin Panel</span>
+                    <h1>Manage Rooms</h1>
+                </div>
+
+                <a href="admin-login.html" class="btn btn-outline">
+                    Logout
+                </a>
+
+            </div>
+
+
+            <!-- Room Management Header -->
+            <section class="card">
+                <div class="card-body">
+
+                    <div>
+                        <span class="eyebrow">Room Management</span>
+                        <h2>Available Rooms</h2>
+
+                        <p>
+                            Manage room details, availability and pricing.
+                        </p>
+                    </div>
+
+                    <br>
+
+                    <a href="#" class="btn btn-primary">
+                        + Add New Room
+                    </a>
+
+                </div>
+            </section>
+
+
+            <br>
+
+
+            <!-- Room List -->
+            <section class="room-grid">
+
+
+                <!-- Garden Deluxe Room -->
+                <article class="room-card">
+
+                    <img src="images/rooms/garden-deluxe-room.jpg"
+                         alt="Garden Deluxe Room">
+
+                    <div class="room-card-body">
+
+                        <span class="eyebrow">Garden Deluxe</span>
+
+                        <h2>Garden Deluxe Room</h2>
+
+                        <p>
+                            28 sq.m · King bed · Garden view
+                        </p>
+
+                        <p>
+                            <strong>Price:</strong> ₹5,999 / night
+                        </p>
+
+                        <p>
+                            <strong>Status:</strong>
+                            <span class="room-status available">
+                                Available
+                            </span>
+                        </p>
+
+                        <div class="room-actions">
+                            <a href="#" class="btn btn-outline">
+                                Edit Room
+                            </a>
+
+                            <a href="#" class="btn btn-outline">
+                                Delete
+                            </a>
+                        </div>
+
+                    </div>
+
+                </article>
+
+
+                <!-- Premium Ocean Room -->
+                <article class="room-card">
+
+                    <img src="images/rooms/premium-ocean-room.jpg"
+                         alt="Premium Ocean Room">
+
+                    <div class="room-card-body">
+
+                        <span class="eyebrow">Premium Ocean</span>
+
+                        <h2>Premium Ocean Room</h2>
+
+                        <p>
+                            32 sq.m · King bed · Ocean view
+                        </p>
+
+                        <p>
+                            <strong>Price:</strong> ₹5,999 / night
+                        </p>
+
+                        <p>
+                            <strong>Status:</strong>
+                            <span class="room-status available">
+                                Available
+                            </span>
+                        </p>
+
+                        <div class="room-actions">
+                            <a href="#" class="btn btn-outline">
+                                Edit Room
+                            </a>
+
+                            <a href="#" class="btn btn-outline">
+                                Delete
+                            </a>
+                        </div>
+
+                    </div>
+
+                </article>
+
+
+                <!-- Executive Suite -->
+                <article class="room-card">
+
+                    <img src="images/rooms/executive-suite.jpg"
+                         alt="Executive Suite">
+
+                    <div class="room-card-body">
+
+                        <span class="eyebrow">Executive</span>
+
+                        <h2>Executive Suite</h2>
+
+                        <p>
+                            45 sq.m · King bed · Private lounge
+                        </p>
+
+                        <p>
+                            <strong>Price:</strong> ₹6,999 / night
+                        </p>
+
+                        <p>
+                            <strong>Status:</strong>
+                            <span class="room-status booked">
+                                Booked
+                            </span>
+                        </p>
+
+                        <div class="room-actions">
+                            <a href="#" class="btn btn-outline">
+                                Edit Room
+                            </a>
+
+                            <a href="#" class="btn btn-outline">
+                                Delete
+                            </a>
+                        </div>
+
+                    </div>
+
+                </article>
+
+
+                <!-- Family Room -->
+                <article class="room-card">
+
+                    <img src="images/rooms/family-room.jpg"
+                         alt="Family Room">
+
+                    <div class="room-card-body">
+
+                        <span class="eyebrow">Family</span>
+
+                        <h2>Family Room</h2>
+
+                        <p>
+                            38 sq.m · Twin queen beds · Garden view
+                        </p>
+
+                        <p>
+                            <strong>Price:</strong> ₹7,999 / night
+                        </p>
+
+                        <p>
+                            <strong>Status:</strong>
+                            <span class="room-status available">
+                                Available
+                            </span>
+                        </p>
+
+                        <div class="room-actions">
+                            <a href="#" class="btn btn-outline">
+                                Edit Room
+                            </a>
+
+                            <a href="#" class="btn btn-outline">
+                                Delete
+                            </a>
+                        </div>
+
+                    </div>
+
+                </article>
+
+
+                <!-- Poolside Villa -->
+                <article class="room-card">
+
+                    <img src="images/rooms/poolside-villa.jpg"
+                         alt="Poolside Villa">
+
+                    <div class="room-card-body">
+
+                        <span class="eyebrow">Poolside</span>
+
+                        <h2>Poolside Villa</h2>
+
+                        <p>
+                            60 sq.m · King bed · Direct pool access
+                        </p>
+
+                        <p>
+                            <strong>Price:</strong> ₹9,999 / night
+                        </p>
+
+                        <p>
+                            <strong>Status:</strong>
+                            <span class="room-status available">
+                                Available
+                            </span>
+                        </p>
+
+                        <div class="room-actions">
+                            <a href="#" class="btn btn-outline">
+                                Edit Room
+                            </a>
+
+                            <a href="#" class="btn btn-outline">
+                                Delete
+                            </a>
+                        </div>
+
+                    </div>
+
+                </article>
+
+
+                <!-- Presidential Suite -->
+                <article class="room-card">
+
+                    <img src="images/rooms/presidential-suite.jpg"
+                         alt="Presidential Suite">
+
+                    <div class="room-card-body">
+
+                        <span class="eyebrow">Presidential</span>
+
+                        <h2>Presidential Suite</h2>
+
+                        <p>
+                            75 sq.m · King bed · Full sea-facing balcony
+                        </p>
+
+                        <p>
+                            <strong>Price:</strong> ₹11,999 / night
+                        </p>
+
+                        <p>
+                            <strong>Status:</strong>
+                            <span class="room-status booked">
+                                Booked
+                            </span>
+                        </p>
+
+                        <div class="room-actions">
+                            <a href="#" class="btn btn-outline">
+                                Edit Room
+                            </a>
+
+                            <a href="#" class="btn btn-outline">
+                                Delete
+                            </a>
+                        </div>
+
+                    </div>
+
+                </article>
+
+
+            </section>
+
+
+            <br>
+
+        </main>
+
+    </div>
+
+</body>
+</html>
