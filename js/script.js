@@ -24,6 +24,14 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 
+  const specialRequests = document.querySelector("#requests");
+  if (specialRequests) {
+    const promo = sessionStorage.getItem("aurelia_promo");
+    if (promo && !specialRequests.value.trim()) {
+      specialRequests.value = `Promo code applied: ${promo} (5th night complimentary offer)`;
+    }
+  }
+
   const saveBooking = (booking) => {
     const savedBookings = JSON.parse(localStorage.getItem("aurelia-bookings") || "[]");
     savedBookings.unshift(booking);
@@ -127,9 +135,18 @@ document.addEventListener("DOMContentLoaded", () => {
         return;
       }
 
-      alert("Login successful. Welcome back!");
+      localStorage.setItem(
+        "aurelia_user",
+        JSON.stringify({
+          email: email,
+          isLoggedIn: true,
+          loggedInAt: new Date().toISOString(),
+        })
+      );
+
+      alert("Login successful! Redirecting to your bookings...");
       loginForm.reset();
-      window.location.href = "index.html";
+      window.location.href = "my-bookings.html";
     });
   }
 
@@ -138,6 +155,7 @@ document.addEventListener("DOMContentLoaded", () => {
     registrationForm.addEventListener("submit", (event) => {
       event.preventDefault();
 
+      const email = registrationForm.querySelector("#email")?.value.trim();
       const password = registrationForm.querySelector("#password")?.value;
       const confirmPassword = registrationForm.querySelector("#confirm-password")?.value;
 
@@ -151,11 +169,45 @@ document.addEventListener("DOMContentLoaded", () => {
         return;
       }
 
-      alert("Account created successfully. You can now log in.");
+      if (email) {
+        localStorage.setItem(
+          "aurelia_user",
+          JSON.stringify({
+            email: email,
+            isLoggedIn: true,
+            loggedInAt: new Date().toISOString(),
+          })
+        );
+      }
+
+      alert("Account created successfully! Redirecting to your bookings...");
       registrationForm.reset();
-      window.location.href = "login.html";
+      window.location.href = "my-bookings.html";
     });
   }
 
   renderBookings();
+
+  const userGreeting = document.querySelector("#booking-user-email");
+  const myBookingsLogoutBtn = document.querySelector("#my-bookings-logout-btn");
+  if (userGreeting || myBookingsLogoutBtn) {
+    try {
+      const user = JSON.parse(localStorage.getItem("aurelia_user") || "null");
+      if (user && user.email) {
+        if (userGreeting) userGreeting.textContent = `Logged in: ${user.email}`;
+      } else {
+        if (userGreeting) userGreeting.textContent = "Guest session";
+      }
+    } catch {
+      if (userGreeting) userGreeting.textContent = "Guest session";
+    }
+
+    if (myBookingsLogoutBtn) {
+      myBookingsLogoutBtn.addEventListener("click", () => {
+        localStorage.removeItem("aurelia_user");
+        alert("You have been logged out.");
+        window.location.href = "index.html";
+      });
+    }
+  }
 });
