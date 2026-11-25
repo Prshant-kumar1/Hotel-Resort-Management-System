@@ -1,5 +1,7 @@
+
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,6 +10,7 @@
 
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/admin.css">
+
 </head>
 
 <body>
@@ -51,6 +54,7 @@
 
             <!-- Room Management Header -->
             <section class="card">
+
                 <div class="card-body">
 
                     <div>
@@ -64,11 +68,12 @@
 
                     <br>
 
-                    <a href="#" class="btn btn-primary">
+                    <button class="btn btn-primary" onclick="addRoom()">
                         + Add New Room
-                    </a>
+                    </button>
 
                 </div>
+
             </section>
 
 
@@ -76,7 +81,7 @@
 
 
             <!-- Room List -->
-            <section class="room-grid">
+            <section class="room-grid" id="room-list">
 
 
                 <!-- Garden Deluxe Room -->
@@ -107,13 +112,17 @@
                         </p>
 
                         <div class="room-actions">
-                            <a href="#" class="btn btn-outline">
-                                Edit Room
-                            </a>
 
-                            <a href="#" class="btn btn-outline">
+                            <button class="btn btn-outline"
+                                onclick="editRoom(this)">
+                                Edit Room
+                            </button>
+
+                            <button class="btn btn-outline"
+                                onclick="deleteRoom(this)">
                                 Delete
-                            </a>
+                            </button>
+
                         </div>
 
                     </div>
@@ -149,13 +158,17 @@
                         </p>
 
                         <div class="room-actions">
-                            <a href="#" class="btn btn-outline">
-                                Edit Room
-                            </a>
 
-                            <a href="#" class="btn btn-outline">
+                            <button class="btn btn-outline"
+                                onclick="editRoom(this)">
+                                Edit Room
+                            </button>
+
+                            <button class="btn btn-outline"
+                                onclick="deleteRoom(this)">
                                 Delete
-                            </a>
+                            </button>
+
                         </div>
 
                     </div>
@@ -191,13 +204,17 @@
                         </p>
 
                         <div class="room-actions">
-                            <a href="#" class="btn btn-outline">
-                                Edit Room
-                            </a>
 
-                            <a href="#" class="btn btn-outline">
+                            <button class="btn btn-outline"
+                                onclick="editRoom(this)">
+                                Edit Room
+                            </button>
+
+                            <button class="btn btn-outline"
+                                onclick="deleteRoom(this)">
                                 Delete
-                            </a>
+                            </button>
+
                         </div>
 
                     </div>
@@ -233,13 +250,17 @@
                         </p>
 
                         <div class="room-actions">
-                            <a href="#" class="btn btn-outline">
-                                Edit Room
-                            </a>
 
-                            <a href="#" class="btn btn-outline">
+                            <button class="btn btn-outline"
+                                onclick="editRoom(this)">
+                                Edit Room
+                            </button>
+
+                            <button class="btn btn-outline"
+                                onclick="deleteRoom(this)">
                                 Delete
-                            </a>
+                            </button>
+
                         </div>
 
                     </div>
@@ -275,13 +296,17 @@
                         </p>
 
                         <div class="room-actions">
-                            <a href="#" class="btn btn-outline">
-                                Edit Room
-                            </a>
 
-                            <a href="#" class="btn btn-outline">
+                            <button class="btn btn-outline"
+                                onclick="editRoom(this)">
+                                Edit Room
+                            </button>
+
+                            <button class="btn btn-outline"
+                                onclick="deleteRoom(this)">
                                 Delete
-                            </a>
+                            </button>
+
                         </div>
 
                     </div>
@@ -317,13 +342,17 @@
                         </p>
 
                         <div class="room-actions">
-                            <a href="#" class="btn btn-outline">
-                                Edit Room
-                            </a>
 
-                            <a href="#" class="btn btn-outline">
+                            <button class="btn btn-outline"
+                                onclick="editRoom(this)">
+                                Edit Room
+                            </button>
+
+                            <button class="btn btn-outline"
+                                onclick="deleteRoom(this)">
                                 Delete
-                            </a>
+                            </button>
+
                         </div>
 
                     </div>
@@ -333,12 +362,14 @@
 
             </section>
 
-
             <br>
 
         </main>
 
     </div>
+
+    <!-- JavaScript File -->
+    <script src="Js/manage-rooms.js"></script>
 
 </body>
 </html>

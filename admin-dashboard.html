@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -22,32 +23,17 @@
             </a>
 
             <nav class="admin-nav">
-
-                <a href="admin-dashboard.html" class="active">
-                    Dashboard
-                </a>
-
-                <a href="manage-rooms.html">
-                    Manage Rooms
-                </a>
-
-                <a href="manage-bookings.html">
-                    Manage Bookings
-                </a>
-
-                <a href="index.html">
-                    Back to Website
-                </a>
-
+                <a href="admin-dashboard.html" class="active">Dashboard</a>
+                <a href="manage-rooms.html">Manage Rooms</a>
+                <a href="manage-bookings.html">Manage Bookings</a>
+                <a href="index.html">Back to Website</a>
             </nav>
 
         </aside>
 
-
         <main class="admin-main">
 
             <div class="admin-topbar">
-
                 <div>
                     <span class="eyebrow">Admin Panel</span>
                     <h1>Dashboard</h1>
@@ -56,33 +42,39 @@
                 <a href="admin-login.html" class="btn btn-outline">
                     Logout
                 </a>
-
             </div>
+
+            <!-- Room and Booking Statistics -->
             <section class="stat-grid">
 
                 <article class="stat-card">
-                    <div class="stat-value">24</div>
+                    <div class="stat-value" id="total-rooms">6</div>
                     <div class="stat-label">Total Rooms</div>
                 </article>
 
                 <article class="stat-card">
-                    <div class="stat-value">18</div>
+                    <div class="stat-value" id="available-rooms">4</div>
                     <div class="stat-label">Available Rooms</div>
                 </article>
 
                 <article class="stat-card">
-                    <div class="stat-value">12</div>
+                    <div class="stat-value" id="booked-rooms">2</div>
+                    <div class="stat-label">Booked Rooms</div>
+                </article>
+
+                <article class="stat-card">
+                    <div class="stat-value" id="total-bookings">3</div>
                     <div class="stat-label">Total Bookings</div>
                 </article>
 
                 <article class="stat-card">
-                    <div class="stat-value">6</div>
+                    <div class="stat-value" id="pending-bookings">1</div>
                     <div class="stat-label">Pending Bookings</div>
                 </article>
 
             </section>
-            <section class="card">
 
+            <section class="card">
                 <div class="card-body">
 
                     <h2>Welcome, Admin</h2>
@@ -93,36 +85,35 @@
                     </p>
 
                 </div>
-
             </section>
-            <section class="card">
 
+            <section class="card">
                 <div class="card-body">
 
                     <span class="eyebrow">Recent Activity</span>
-
                     <h2>Recent Bookings</h2>
 
+                    <div id="recent-bookings">
+                    </div>
+
                     <p>
-                        Booking #1024 — Garden Deluxe Room — Confirmed
+                        Confirmed Bookings:
+                        <strong id="confirmed-bookings">1</strong>
                     </p>
 
                     <p>
-                        Booking #1023 — Executive Suite — Pending
-                    </p>
-
-                    <p>
-                        Booking #1022 — Premium Ocean Room — Confirmed
+                        Cancelled Bookings:
+                        <strong id="cancelled-bookings">1</strong>
                     </p>
 
                 </div>
-
             </section>
 
         </main>
 
     </div>
 
-</body>
+    <script src="Js/admin-dashboard.js"></script>
 
+</body>
 </html>
