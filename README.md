@@ -1,46 +1,34 @@
 # Aurelia Bay Resort — Hotel & Resort Management System
- 
-B.Tech CSE 3rd Year Synopsis Project — GLA University, Mathura
-Department of Computer Engineering Applications · Supervised by Mr. Deepak Prasad
- 
-## Overview
- 
-A centralized web platform for presenting hotel and resort information —
-rooms & suites, amenities, gallery, offers — with static UI pages for
-booking, login, registration, and admin management. Current phase
-delivers a responsive, multi-page front-end with real photography;
-backend and database integration are planned for later phases.
- 
-## Team
- 
-| Name | Roll No. | Owns |
-|---|---|---|
-| Prashant Kumar | 2415001151 | Home, About, Contact + shared `css/style.css` |
-| Prashant Sharma | 2415001154 | Rooms Listing, Room Detail, Gallery + `css/rooms.css` |
-| Prateek Mudgal | 2415001163 | Booking, Login, Register, My Bookings + `css/booking.css` |
-| Priyanka Saraswat | 2415001200 | Admin Login, Admin Dashboard, Manage Rooms, Manage Bookings + `css/admin.css` |
- 
-## Current phase
- 
-Static, responsive front-end — HTML5 + CSS3 only, no JavaScript. No
-backend logic, no database, no working authentication yet.
-Booking/login/register/admin pages are UI mockups at this stage. The
-contact page embeds a real Google Maps iframe (no API key needed for
-the basic embed).
- 
+
+A responsive, multi-page front-end prototype for a fictional resort on the Konkan coast. It presents rooms, resort information, and guest and admin workflows.
+
+## Features
+
+- Home, About, Contact, Rooms & Suites, Room Details, and Gallery pages
+- Room-category and price filters
+- Booking, login, registration, and My Bookings interfaces
+- Admin login, dashboard, room management, and booking management interfaces
+- Responsive layouts with locally stored photography
+- Vanilla JavaScript for selected interactions and browser-side demo flows
+
+## Project status
+
+This is a front-end prototype, not a production booking system. It has no server, database, API, payment processing, or real authentication. Any demo data or browser storage is local to the visitor and is not shared with a hotel or other users.
+
 ## Tech stack
- 
-- HTML5, CSS3 
-- Fonts: Fraunces (display) + Work Sans (body), loaded via Google Fonts
-- Real photography for rooms, resort exteriors, and team headshots
-- Git + GitHub for version control
+
+- HTML5 and CSS3
+- Vanilla JavaScript
+- Google Fonts: Fraunces and Work Sans
+- Git and GitHub
+
 ## Project structure
- 
-*(as currently on `dev`)*
- 
+
+The application source currently lives on the `dev` branch; the `main` branch contains this README. Switch to `dev` before running the site.
+
 ```
 Hotel-Resort-Management-System/
-├── index.html
+├── index.html                 # Home
 ├── about.html
 ├── contact.html
 ├── rooms.html
@@ -54,30 +42,28 @@ Hotel-Resort-Management-System/
 ├── admin-dashboard.html
 ├── manage-rooms.html
 ├── manage-bookings.html
-├── css/
-│   ├── style.css      ← shared: reset, variables, typography, header, footer, buttons, cards, forms
-│   ├── rooms.css       ← rooms / room-detail / gallery layout only
-│   ├── booking.css      ← booking / login / register / my-bookings layout only
-│   └── admin.css         ← admin sidebar shell + stat cards
-├── gallery/               ← room photography (bedroom + exterior shots per room type)
-│                             + team headshots for About
-├── images/
-│   ├── rooms/              ← one hero image per room type, used on rooms.html
-│   ├── admin-resort.jpg
-│   └── admin-dashboard.jpg  ← currently a 0-byte file, see Known Issues
-├── README.md
-└── WALKTHROUGH.md
+├── css/                       # Shared, rooms, booking, and admin styles
+├── js/                        # Page interaction scripts
+├── Js/                        # Additional shared/page scripts
+├── gallery/                   # Resort and room photography, team images
+└── images/                    # Room and admin imagery
 ```
- 
-## Running it
- 
-No build step. Open `index.html` in a browser, or use a local dev
-server (e.g. VS Code's Live Server) for auto-reload while editing.
 
-## Roadmap (future phases)
+## Run locally
 
-- Node.js / Express.js / MySQL backend
-- Working authentication (guest + admin)
-- Live booking logic and availability
-- Admin dashboard wired to real data
-- Real photography in `/images`
+There is no build step or package installation.
+
+```bash
+git clone https://github.com/Prshant-kumar1/Hotel-Resort-Management-System.git
+cd Hotel-Resort-Management-System
+git switch dev
+python3 -m http.server 8000
+```
+
+Open <http://localhost:8000> in a browser. Alternatively, open `index.html` directly or use an editor's local-server extension. Keep the capitalization of paths such as `Js/` and `js/` unchanged; they are distinct on case-sensitive systems.
+
+## Planned work
+
+- Add a backend and database
+- Implement secure guest and admin authentication
+- Connect bookings, room availability, and admin tools to real data
